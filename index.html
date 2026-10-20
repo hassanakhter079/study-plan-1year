@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- WebCraft Brand & Favicon -->
+  <link rel="icon" type="image/png" href="data:image/png;base64,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">
+  <link rel="apple-touch-icon" href="data:image/png;base64,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">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1-Year Medical Exam Plan — Dr. Hassan</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0A1628;--ink2:#1E3A5F;--teal:#0D9488;--teal-dim:#0F766E;--teal-pale:#CCFBF1;--amber:#B45309;--amber-pale:#FEF3C7;--rose:#BE123C;--rose-pale:#FFF1F2;--slate:#64748B;--border:#E2E8F0;--bg:#F8FAFC;--white:#FFFFFF;--card:#FFFFFF;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;}
+.hero{background:var(--ink);min-height:320px;padding:60px 40px 52px;position:relative;overflow:hidden;}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(13,148,136,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(13,148,136,.07) 1px,transparent 1px);background-size:48px 48px;}
+.hero-glow{position:absolute;width:480px;height:480px;background:radial-gradient(circle,rgba(13,148,136,.2) 0%,transparent 65%);top:-80px;right:-60px;pointer-events:none;}
+.hero-content{position:relative;max-width:760px;}
+.eyebrow{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--teal);margin-bottom:16px;}
+.hero h1{font-family:'Fraunces',serif;font-size:clamp(34px,6vw,60px);color:white;line-height:1.05;font-weight:900;margin-bottom:10px;}
+.hero h1 em{font-style:italic;color:var(--teal);font-weight:400;}
+.hero-sub{font-size:14px;color:rgba(255,255,255,.45);margin-bottom:32px;max-width:500px;}
+.badges{display:flex;flex-wrap:wrap;gap:8px;}
+.badge{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.65);padding:5px 13px;border-radius:999px;font-size:11px;font-weight:500;}
+.badge.on{background:rgba(13,148,136,.2);border-color:rgba(13,148,136,.4);color:#5EEAD4;}
+.pstrip{background:white;border-bottom:1px solid var(--border);padding:13px 40px;display:flex;align-items:center;gap:14px;position:sticky;top:0;z-index:200;box-shadow:0 1px 10px rgba(0,0,0,.05);}
+.pl{font-size:12px;font-weight:600;color:var(--ink2);white-space:nowrap;}
+.pt{flex:1;height:6px;background:var(--border);border-radius:99px;overflow:hidden;}
+.pf{height:100%;background:linear-gradient(90deg,var(--teal),#06B6D4);border-radius:99px;transition:width .4s;width:0%;}
+.pp{font-family:'DM Mono',monospace;font-size:12px;color:var(--teal);white-space:nowrap;}
+.pc{font-size:11px;color:var(--slate);white-space:nowrap;}
+.wrap{max-width:940px;margin:0 auto;padding:44px 22px 100px;}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:48px;}
+.sc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px 16px;text-align:center;transition:transform .2s,box-shadow .2s;}
+.sc:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,.07);}
+.sn{font-family:'Fraunces',serif;font-size:28px;color:var(--teal);font-weight:700;line-height:1;margin-bottom:5px;}
+.sl{font-size:10px;color:var(--slate);font-weight:600;text-transform:uppercase;letter-spacing:.8px;}
+.ss{font-size:12px;font-weight:600;color:var(--ink2);margin-top:4px;}
+.pdiv{display:flex;align-items:center;gap:14px;margin:48px 0 24px;}
+.pline{flex:1;height:1px;background:var(--border);}
+.ppill{padding:5px 18px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;white-space:nowrap;}
+.ppill.p1{background:#E0FDF4;color:#065F46;border:1px solid #A7F3D0;}
+.ppill.p2{background:#EFF6FF;color:#1E40AF;border:1px solid #BFDBFE;}
+.ppill.p3{background:#FFF7ED;color:#92400E;border:1px solid #FDE68A;}
+.ppill.sys{background:#F5F3FF;color:#4C1D95;border:1px solid #DDD6FE;}
+.ppill.wrn{background:#FFF1F2;color:#9F1239;border:1px solid #FECDD3;}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;margin-bottom:18px;overflow:hidden;}
+.card:hover{box-shadow:0 5px 20px rgba(0,0,0,.05);}
+.card.col .cbody{display:none;}
+.card.col .ti{transform:rotate(-90deg);}
+.ch{display:flex;align-items:center;gap:14px;padding:17px 20px;cursor:pointer;user-select:none;border-bottom:1px solid var(--border);background:var(--bg);}
+.ch:hover{background:#F1F5F9;}
+.mn{font-family:'DM Mono',monospace;font-size:10px;font-weight:500;color:white;background:var(--ink2);width:42px;height:42px;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0;line-height:1.2;}
+.mn span{font-size:16px;font-weight:700;}
+.mn.t{background:var(--teal);}
+.mn.a{background:var(--amber);}
+.mn.r{background:var(--rose);}
+.mi{flex:1;min-width:0;}
+.mt{font-family:'Fraunces',serif;font-size:16px;font-weight:700;color:var(--ink);}
+.ms{font-size:11px;color:var(--slate);margin-top:2px;}
+.mm{text-align:right;flex-shrink:0;}
+.qp{display:inline-block;background:var(--teal-pale);color:var(--teal-dim);padding:3px 9px;border-radius:999px;font-size:10px;font-weight:700;}
+.qp.a{background:var(--amber-pale);color:var(--amber);}
+.qp.r{background:var(--rose-pale);color:var(--rose);}
+.ti{font-size:15px;color:var(--slate);transition:transform .3s;margin-left:6px;flex-shrink:0;}
+.cbody{padding:22px 20px;}
+.wb{margin-bottom:20px;}
+.wb:last-child{margin-bottom:0;}
+.wl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--teal);margin-bottom:9px;padding-bottom:5px;border-bottom:2px solid var(--teal-pale);}
+.cl{list-style:none;}
+.cl li{display:flex;align-items:flex-start;gap:9px;padding:7px 5px;border-bottom:1px solid #F1F5F9;border-radius:6px;}
+.cl li:last-child{border-bottom:none;}
+.cl li.done{opacity:.6;}
+.cl li.done .it{text-decoration:line-through;color:var(--slate);}
+.chkb{width:18px;height:18px;border:2px solid var(--teal);border-radius:4px;cursor:pointer;flex-shrink:0;margin-top:2px;display:flex;align-items:center;justify-content:center;background:white;transition:background .15s;}
+.chkb.done{background:var(--teal);}
+.chkb.done::after{content:'';width:4px;height:7px;border:2px solid white;border-top:none;border-left:none;transform:rotate(45deg) translateY(-1px);}
+.it{font-size:13px;color:var(--ink);line-height:1.5;flex:1;}
+.it strong{color:var(--ink2);}
+.it.hl{color:var(--rose);font-weight:600;}
+.al{border-radius:9px;padding:13px 15px;margin-bottom:16px;font-size:13px;}
+.al.info{background:#EFF6FF;border-left:4px solid #3B82F6;color:#1E40AF;}
+.al.warn{background:var(--amber-pale);border-left:4px solid #F59E0B;}
+.al.warn strong{color:var(--amber);}
+.al.warn p{color:#78350F;margin-top:4px;}
+.al.danger{background:var(--rose-pale);border-left:4px solid var(--rose);}
+.al.danger strong{color:var(--rose);}
+.al.danger p{color:#881337;margin-top:5px;line-height:1.6;}
+.al.ok{background:#F0FDF4;border-left:4px solid #22C55E;color:#166534;}
+.itbl{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:16px;}
+.itbl tr:nth-child(odd) td:first-child{background:#F0FDFA;}
+.itbl tr:nth-child(even) td:first-child{background:#F8FAFC;}
+.itbl td{padding:8px 13px;border:1px solid var(--border);}
+.itbl td:first-child{font-weight:600;width:36%;color:var(--ink2);}
+.ctbl{width:100%;border-collapse:collapse;font-size:12.5px;}
+.ctbl th{background:var(--ink);color:white;padding:9px 13px;text-align:left;font-size:11px;font-weight:600;}
+.ctbl td{padding:8px 13px;border-bottom:1px solid var(--border);}
+.ctbl tr:nth-child(even) td{background:var(--bg);}
+.dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px;}
+.dot.h{background:#22C55E;}.dot.m{background:#F59E0B;}.dot.l{background:#CBD5E1;}
+.or{display:flex;align-items:center;gap:10px;margin-bottom:9px;}
+.olb{font-size:12px;font-weight:600;color:var(--ink2);width:155px;flex-shrink:0;}
+.otr{flex:1;height:9px;background:var(--border);border-radius:99px;overflow:hidden;}
+.of{height:100%;background:linear-gradient(90deg,var(--teal),#06B6D4);border-radius:99px;}
+.op{font-family:'DM Mono',monospace;font-size:11px;color:var(--teal);width:70px;text-align:right;}
+.dg{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;}
+.dc{border-radius:10px;padding:15px;border:1px solid var(--border);}
+.dc.t{background:#F0FDFA;border-color:#A7F3D0;}
+.dc.a{background:var(--amber-pale);border-color:#FDE68A;}
+.dc h4{font-size:12px;font-weight:700;margin-bottom:9px;}
+.dc.t h4{color:#065F46;}.dc.a h4{color:var(--amber);}
+.dc li{font-size:12px;color:var(--ink);margin-bottom:4px;padding-left:12px;position:relative;list-style:none;}
+.dc li::before{content:'→';position:absolute;left:0;color:var(--slate);font-size:10px;top:1px;}
+.rg{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px;}
+.rc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;}
+.ri{font-size:22px;margin-bottom:7px;}
+.rt{font-size:12px;font-weight:700;color:var(--ink2);margin-bottom:5px;}
+.rd{font-size:11.5px;color:var(--slate);line-height:1.5;}
+.trk{width:100%;border-collapse:collapse;font-size:12.5px;}
+.trk th{background:var(--ink);color:white;padding:9px 12px;text-align:left;font-weight:600;font-size:11px;}
+.trk td{padding:8px 12px;border-bottom:1px solid var(--border);}
+.trk tr:nth-child(even) td{background:var(--bg);}
+.si{border:1px solid var(--border);border-radius:5px;padding:4px 7px;font-size:12px;width:75px;font-family:'DM Mono',monospace;background:white;}
+.si:focus{outline:none;border-color:var(--teal);}
+.ni{border:1px solid var(--border);border-radius:5px;padding:4px 7px;font-size:11.5px;width:100%;background:white;}
+.ni:focus{outline:none;border-color:var(--teal);}
+.fq{background:var(--ink);border-radius:16px;padding:40px;text-align:center;margin-top:44px;}
+.fq p{font-family:'Fraunces',serif;font-size:clamp(17px,3vw,24px);font-style:italic;color:white;margin-bottom:10px;}
+.fq span{font-family:'Fraunces',serif;font-size:clamp(19px,3.5vw,28px);color:var(--teal);font-weight:700;}
+.fq small{display:block;margin-top:14px;font-size:12px;color:rgba(255,255,255,.3);}
+@media(max-width:600px){.hero{padding:36px 18px 32px;}.pstrip{padding:11px 16px;}.wrap{padding:26px 14px 80px;}.cbody{padding:16px 14px;}.dg{grid-template-columns:1fr;}.rg{grid-template-columns:1fr;}.stats{grid-template-columns:repeat(2,1fr);}}</style>
+</head>
+<body>
+<div class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="eyebrow">Dr. Muhammad Hassan Akhtar · MBBS Bishkek · Nishtar Hospital Multan</div>
+    <h1>1-Year <em>Medical Exam</em><br>Preparation Plan</h1>
+    <p class="hero-sub">Study once. Aim for all three. Every hour in Internal Medicine serves SMLE, FCPS Part 1, and MRCP Part 1 simultaneously.</p>
+    <div class="badges">
+      <span class="badge on">SMLE — Priority 1</span>
+      <span class="badge on">FCPS Part 1 — Priority 2</span>
+      <span class="badge on">MRCP Part 1 — Priority 3</span>
+      <span class="badge">Internal Medicine Track</span>
+      <span class="badge">12 Months</span>
+    </div>
+  </div>
+</div>
+
+<div class="pstrip">
+  <span class="pl">Checklist Progress</span>
+  <div class="pt"><div class="pf" id="pf"></div></div>
+  <span class="pp" id="pp">0%</span>
+  <span class="pc" id="pc">0 / 0 tasks</span>
+</div>
+
+<div class="wrap">
+  <div class="stats">
+    <div class="sc"><div class="sn">12</div><div class="sl">Months</div><div class="ss">Total Plan</div></div>
+    <div class="sc"><div class="sn">3</div><div class="sl">Exams</div><div class="ss">SMLE · FCPS · MRCP</div></div>
+    <div class="sc"><div class="sn">65%</div><div class="sl">Target Score</div><div class="ss">Before Booking Exam</div></div>
+    <div class="sc"><div class="sn">M7</div><div class="sl">SMLE Attempt</div><div class="ss">Primary Goal</div></div>
+    <div class="sc"><div class="sn">SAR</div><div class="sl">13,000/mo</div><div class="ss">Cost of Each Delay</div></div>
+  </div>
+
+  <!-- OVERLAP -->
+  <div class="card col" id="s-ov">
+    <div class="ch" onclick="tog('s-ov')">
+      <div class="mn t"><span>📊</span></div>
+      <div class="mi"><div class="mt">Syllabus Overlap — Study Once, Aim for All Three</div><div class="ms">How SMLE, FCPS Part 1, and MRCP Part 1 share content</div></div>
+      <span class="ti">▾</span>
+    </div>
+    <div class="cbody">
+      <div class="al info"><strong>Core Strategy:</strong> The three exams share 60–80% content in Internal Medicine. Build one foundation, do targeted top-ups per exam. Never study three separate syllabuses.</div>
+      <div style="margin-bottom:18px;">
+        <div class="or"><span class="olb">Internal Medicine</span><div class="otr"><div class="of" style="width:100%"></div></div><span class="op">All 3 exams</span></div>
+        <div class="or"><span class="olb">Cardiology</span><div class="otr"><div class="of" style="width:100%"></div></div><span class="op">All 3 exams</span></div>
+        <div class="or"><span class="olb">Ethics/Safety</span><div class="otr"><div class="of" style="width:100%"></div></div><span class="op">All 3 exams</span></div>
+        <div class="or"><span class="olb">Pharmacology</span><div class="otr"><div class="of" style="width:85%"></div></div><span class="op">SMLE + FCPS</span></div>
+        <div class="or"><span class="olb">Pathology</span><div class="otr"><div class="of" style="width:70%"></div></div><span class="op">SMLE + FCPS</span></div>
+        <div class="or"><span class="olb">OB/GYN (25%)</span><div class="otr"><div class="of" style="width:33%;background:linear-gradient(90deg,#F59E0B,#FCD34D)"></div></div><span class="op" style="color:var(--amber)">SMLE only</span></div>
+        <div class="or"><span class="olb">Paediatrics (25%)</span><div class="otr"><div class="of" style="width:33%;background:linear-gradient(90deg,#F59E0B,#FCD34D)"></div></div><span class="op" style="color:var(--amber)">SMLE only</span></div>
+        <div class="or"><span class="olb">Statistics/Epi</span><div class="otr"><div class="of" style="width:40%;background:linear-gradient(90deg,#8B5CF6,#A78BFA)"></div></div><span class="op" style="color:#7C3AED">MRCP heavy</span></div>
+      </div>
+      <table class="ctbl">
+        <tr><th>Subject</th><th>SMLE</th><th>FCPS Part 1</th><th>MRCP Part 1</th></tr>
+        <tr><td>Internal Medicine</td><td><span class="dot h"></span>30%</td><td><span class="dot h"></span>40%</td><td><span class="dot h"></span>50%</td></tr>
+        <tr><td>Paediatrics</td><td><span class="dot h"></span>25%</td><td><span class="dot l"></span>Light</td><td><span class="dot l"></span>Minimal</td></tr>
+        <tr><td>OB/GYN</td><td><span class="dot h"></span>25%</td><td><span class="dot l"></span>Minimal</td><td><span class="dot l"></span>Minimal</td></tr>
+        <tr><td>Surgery</td><td><span class="dot h"></span>20%</td><td><span class="dot l"></span>Light</td><td><span class="dot l"></span>Minimal</td></tr>
+        <tr><td>Pathology</td><td><span class="dot m"></span>Moderate</td><td><span class="dot h"></span>Heavy</td><td><span class="dot l"></span>Light</td></tr>
+        <tr><td>Pharmacology</td><td><span class="dot m"></span>Moderate</td><td><span class="dot h"></span>Heavy</td><td><span class="dot m"></span>Moderate</td></tr>
+        <tr><td>Statistics/Epi</td><td><span class="dot l"></span>Light</td><td><span class="dot m"></span>Moderate</td><td><span class="dot h"></span>Heavy</td></tr>
+        <tr><td>Ethics/Safety</td><td><span class="dot m"></span>Moderate</td><td><span class="dot m"></span>Moderate</td><td><span class="dot m"></span>Moderate</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- RESOURCES -->
+  <div class="card col" id="s-res">
+    <div class="ch" onclick="tog('s-res')">
+      <div class="mn t"><span>📚</span></div>
+      <div class="mi"><div class="mt">Core Resources</div><div class="ms">What to buy — and what NOT to buy</div></div>
+      <span class="ti">▾</span>
+    </div>
+    <div class="cbody">
+      <div class="al warn"><strong>⚠️ Do not buy every book.</strong><p>Kumar & Clark + First Aid SMLE + FCPS past papers covers 80% of what you need. More books = less depth per book = lower score.</p></div>
+      <table class="itbl">
+        <tr><td>Kumar & Clark Clinical Medicine</td><td>Primary textbook — serves MRCP + FCPS + SMLE. Read cover to cover.</td></tr>
+        <tr><td>First Aid for SMLE</td><td>SMLE-specific. Use from Month 3 onwards for OB/GYN, Paeds, Surgery.</td></tr>
+        <tr><td>Kaplan USMLE Step 2 CK</td><td>Clinical MCQ bank. High overlap with SMLE and MRCP.</td></tr>
+        <tr><td>FCPS Past Papers</td><td>Free in Pakistani medical WhatsApp groups. Get them now.</td></tr>
+        <tr><td>Passmedicine Qbank</td><td>Best MRCP question bank. Subscribe in Month 11 (funded by Saudi salary).</td></tr>
+        <tr><td>CanadaQBank / ExamCure</td><td>SMLE Qbank. Use from Month 3.</td></tr>
+        <tr><td>Oxford Handbook of Clinical Medicine</td><td>Quick daily reference. Carry it during house job.</td></tr>
+        <tr><td>Robbins Basic Pathology</td><td>Pathology depth for FCPS Part 1 only.</td></tr>
+        <tr><td>BRS Physiology</td><td>High-yield physiology for FCPS Part 1.</td></tr>
+        <tr><td>Talley & O'Connor Clinical Examination</td><td>Gold standard for MRCP PACES examination technique.</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- PHASE 1 -->
+  <div class="pdiv"><div class="pline"></div><div class="ppill p1">Phase 1 — Foundation · Months 1–2 · Full Capacity</div><div class="pline"></div></div>
+  <div class="al info" style="margin-bottom:18px;"><strong>Highest-leverage window.</strong> No house job yet. Full mental energy. Do not waste this period.</div>
+
+  <!-- M1 -->
+  <div class="card" id="m1">
+    <div class="ch" onclick="tog('m1')">
+      <div class="mn t"><div>MON</div><span>1</span></div>
+      <div class="mi"><div class="mt">Internal Medicine Core — Systems 1 to 4</div><div class="ms">Cardiology · Respiratory · Gastroenterology · Nephrology</div></div>
+      <div class="mm"><div class="qp">30 MCQs/day</div></div>
+      <span class="ti">▾</span>
+    </div>
+    <div class="cbody">
+      <div class="wb"><div class="wl">Week 1–2 — Cardiology</div>
+        <ul class="cl">
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it">Kumar & Clark: Full Cardiovascular chapter — complete read</span></li>
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it">Topics: Heart failure, IHD, arrhythmias, valvular disease, hypertension</span></li>
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it"><strong>ECG interpretation:</strong> Practice 20 ECGs daily — tested heavily in all three exams</span></li>
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it">Pharmacology: Antihypertensives, antiarrhythmics, anticoagulants — mechanisms + side effects</span></li>
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it">30 MCQs daily on Cardiology (Kaplan or CanadaQBank)</span></li>
+        </ul>
+      </div>
+      <div class="wb"><div class="wl">Week 3 — Respiratory</div>
+        <ul class="cl">
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it">Topics: Asthma, COPD, pneumonia, TB, lung cancer, pleural disease, pulmonary embolism</span></li>
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it">CXR interpretation: consolidation, effusion, pneumothorax — basic patterns</span></li>
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it">30 MCQs daily on Respiratory</span></li>
+        </ul>
+      </div>
+      <div class="wb"><div class="wl">Week 4 — Gastroenterology + Nephrology</div>
+        <ul class="cl">
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it">GI: Peptic ulcer, IBD, liver cirrhosis, hepatitis, pancreatitis, GI cancers</span></li>
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it">Nephrology: AKI, CKD, glomerulonephritis, UTI, renal stones</span></li>
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it"><strong>Fluids and electrolytes — master this.</strong> Appears extensively in all three exams</span></li>
+        </ul>
+      </div>
+      <div class="wb"><div class="wl">Month 1 Retention</div>
+        <ul class="cl">
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it">Every Sunday: 2-hour revision of the entire week using your summary sheets</span></li>
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it">End of month: 50-question mock — target 65%+</span></li>
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it">Write 1-page summary sheet per system in your own words</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- M2 -->
+  <div class="card col" id="m2">
+    <div class="ch" onclick="tog('m2')">
+      <div class="mn"><div>MON</div><span>2</span></div>
+      <div class="mi"><div class="mt">Internal Medicine Core — Systems 5–8 + Basic Sciences</div><div class="ms">Endocrinology · Neurology · Haematology · Rheumatology · Pathology · Pharmacology</div></div>
+      <div class="mm"><div class="qp">30 MCQs/day</div></div>
+      <span class="ti">▾</span>
+    </div>
+    <div class="cbody">
+      <div class="wb"><div class="wl">Week 5 — Endocrinology + Rheumatology</div>
+        <ul class="cl">
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it">Endocrinology: Diabetes (Type 1+2), thyroid disorders, adrenal disease, pituitary, osteoporosis</span></li>
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it"><strong>Diabetes management</strong> — extremely high yield for SMLE (Saudi context: very common condition)</span></li>
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it">Rheumatology: RA, SLE, gout, seronegative arthropathies, vasculitis</span></li>
+        </ul>
+      </div>
+      <div class="wb"><div class="wl">Week 6 — Neurology + Psychiatry</div>
+        <ul class="cl">
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it">Neurology: Stroke, epilepsy, meningitis, Parkinson's, MS, headache, peripheral neuropathy</span></li>
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it">You enjoy neurology theoretically — go deeper than minimum this week</span></li>
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it">Psychiatry: Depression, schizophrenia, anxiety, substance abuse, delirium</span></li>
+        </ul>
+      </div>
+      <div class="wb"><div class="wl">Week 7 — Haematology + Oncology</div>
+        <ul class="cl">
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it">Haematology: Anaemias, leukaemias, lymphomas, coagulation disorders, transfusion medicine</span></li>
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it">Oncology basics: Paraneoplastic syndromes, common cancers, chemotherapy principles</span></li>
+        </ul>
+      </div>
+      <div class="wb"><div class="wl">Week 8 — Basic Sciences Sprint (FCPS-specific)</div>
+        <ul class="cl">
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it">Pathology (Robbins): Inflammation, neoplasia, cell injury, key organ pathology</span></li>
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it">Pharmacology: Drug classes, mechanisms, side effects, contraindications — systematic review</span></li>
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it">Physiology: High-yield renal, cardiac, respiratory, endocrine physiology (BRS)</span></li>
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it">This week is FCPS Part 1 specific — SMLE and MRCP test less basic science</span></li>
+        </ul>
+      </div>
+      <div class="wb"><div class="wl">Month 2 Retention</div>
+        <ul class="cl">
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it">100-question mixed mock — target 60%+ (mixed content is harder)</span></li>
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it">Review Month 1 summary sheets — 30 minutes daily reading</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASE 2 -->
+  <div class="pdiv"><div class="pline"></div><div class="ppill p2">Phase 2 — House Job Active · Months 3–8 · 1.5–2 hrs/day</div><div class="pline"></div></div>
+  <div class="dg" style="margin-bottom:22px;">
+    <div class="dc t"><h4>Clinical Learning Rule</h4><ul><li>Every patient → link to exam topic</li><li>Every drug → know its mechanism</li><li>Every sign → revise the condition</li><li>Every case → practice formal presentation</li></ul></div>
+    <div class="dc a"><h4>Daily Study Structure (Post-Shift)</h4><ul><li>30 min: Review yesterday's cases</li><li>45 min: 40 MCQs timed</li><li>30 min: Review wrong answers</li><li>Weekend: 2-hour topic revision</li></ul></div>
+  </div>
+
+  <!-- M3 -->
+  <div class="card col" id="m3">
+    <div class="ch" onclick="tog('m3')">
+      <div class="mn a"><div>MON</div><span>3</span></div>
+      <div class="mi"><div class="mt">SMLE-Specific: OB/GYN + Paediatrics</div><div class="ms">50% of SMLE weight combined — SMLE-only investment</div></div>
+      <div class="mm"><div class="qp a">40 MCQs/day</div></div>
+      <span class="ti">▾</span>
+    </div>
+    <div class="cbody">
+      <div class="al info">These subjects carry 50% of SMLE weight but are barely tested in FCPS or MRCP. This month is purely SMLE investment — do not skip it.</div>
+      <ul class="cl">
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">OB/GYN (25% of SMLE): Normal labour, antenatal care, complications, contraception, gynaecological cancers</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Paediatrics (25% of SMLE): Developmental milestones, common childhood diseases, vaccination schedules, neonatal emergencies</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Use First Aid SMLE chapters — more concise than Kumar & Clark for these subjects</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">30–40 MCQs daily focused on OB/GYN and Paediatrics only</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">End of month: 50-question OB/GYN + Paeds mock — target 65%</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- M4 -->
+  <div class="card col" id="m4">
+    <div class="ch" onclick="tog('m4')">
+      <div class="mn a"><div>MON</div><span>4</span></div>
+      <div class="mi"><div class="mt">SMLE-Specific: Surgery + Ethics + Patient Safety</div><div class="ms">Surgery 20% of SMLE · Ethics tested in all three exams</div></div>
+      <div class="mm"><div class="qp a">40 MCQs/day</div></div>
+      <span class="ti">▾</span>
+    </div>
+    <div class="cbody">
+      <ul class="cl">
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Surgery (20% SMLE): Acute abdomen, surgical emergencies, trauma basics, pre/post-operative care</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Patient Safety: Medication errors, hand hygiene, infection control, informed consent — 10 questions per paper</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Medical Ethics: Autonomy, beneficence, confidentiality, end-of-life decisions</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Ethics investment serves SMLE, FCPS, and MRCP — triple value</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">40 MCQs daily on Surgery + Ethics</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- M5 -->
+  <div class="card col" id="m5">
+    <div class="ch" onclick="tog('m5')">
+      <div class="mn t"><div>MON</div><span>5</span></div>
+      <div class="mi"><div class="mt">Full SMLE Integration + First Mock Exams</div><div class="ms">Connect all knowledge — begin timed 200-question mocks</div></div>
+      <div class="mm"><div class="qp">50 MCQs/day</div></div>
+      <span class="ti">▾</span>
+    </div>
+    <div class="cbody">
+      <ul class="cl">
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Week 1–2: Rapid revision of all SMLE subjects using your summary sheets</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Week 3: First full 200-question SMLE mock — timed, exam conditions, no interruptions</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Week 4: Second full mock — analyse every wrong answer systematically</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Identify your 3 weakest subjects → plan targeted blitz in Month 6</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Download SCFHS official blueprint → verify you've covered every listed topic</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Join SMLE Pakistan WhatsApp group → get recent repeat questions</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Target mock score: 60%+ before moving to Month 6</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- M6 -->
+  <div class="card col" id="m6">
+    <div class="ch" onclick="tog('m6')">
+      <div class="mn t"><div>MON</div><span>6</span></div>
+      <div class="mi"><div class="mt">SMLE Weak Areas + Final Preparation</div><div class="ms">Fix gaps, maximize score — book Prometric this month</div></div>
+      <div class="mm"><div class="qp">60–80/day</div></div>
+      <span class="ti">▾</span>
+    </div>
+    <div class="cbody">
+      <ul class="cl">
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Week 1–2: Blitz your 3 weakest subjects identified in Month 5 mocks</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Week 3: 150 MCQs/day — full intensity, timed sets</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">SCFHS official free mock exam on portal — do this in Week 3</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Week 4: Summary sheets only — no new content</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it"><strong>Book Prometric slot</strong> (Lahore or Karachi) for Month 7</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Review all flagged wrong questions from past 3 months of Qbank</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Target mock score: 65%+ before sitting the actual exam</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- M7 -->
+  <div class="card col" id="m7">
+    <div class="ch" onclick="tog('m7')">
+      <div class="mn r"><div>MON</div><span>7</span></div>
+      <div class="mi"><div class="mt">SIT SMLE + Decompress + Mumaris Submission</div><div class="ms">Exam month — then immediately start next phase</div></div>
+      <div class="mm"><div class="qp r">EXAM MONTH</div></div>
+      <span class="ti">▾</span>
+    </div>
+    <div class="cbody">
+      <div class="al danger"><strong>Primary Goal of the Entire Plan</strong><p>SMLE clearance gets you to Saudi Arabia. Everything after can be funded by Saudi salary. This is what the first 6 months are building toward.</p></div>
+      <ul class="cl">
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Week 1: Final light revision — summary sheets only, confidence building, no new content</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it hl">⭐ Week 2: SIT SMLE EXAM — Lahore or Karachi Prometric center</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Results within 48–72 hours by email + on Mumaris portal</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Week 3–4: Submit Mumaris Plus full application + apply for Classification Certificate</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Begin light Kumar & Clark re-read from Chapter 1 — FCPS mode starts</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Start job applications to MOH portal + recruitment agencies immediately after result</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- M8 -->
+  <div class="card col" id="m8">
+    <div class="ch" onclick="tog('m8')">
+      <div class="mn a"><div>MON</div><span>8</span></div>
+      <div class="mi"><div class="mt">FCPS Part 1 — Basic Sciences Intensive</div><div class="ms">Pathology · Pharmacology · Physiology · Anatomy</div></div>
+      <div class="mm"><div class="qp a">40 MCQs/day</div></div>
+      <span class="ti">▾</span>
+    </div>
+    <div class="cbody">
+      <div class="al info">FCPS Part 1 is heavier on basic sciences than SMLE or MRCP. This is the content gap to close now.</div>
+      <ul class="cl">
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Pathology: Complete Robbins Basic Pathology — focus on mechanisms, not just facts</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Pharmacology: Systematic drug class review — receptor pharmacology, toxicology</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Physiology: BRS Physiology — cardiac, renal, respiratory, endocrine in depth</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Anatomy: High-yield clinical anatomy — clinical correlations, not gross dissection</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">40 MCQs daily from FCPS past papers — get them free from Pakistani medical WhatsApp groups</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PHASE 3 -->
+  <div class="pdiv"><div class="pline"></div><div class="ppill p3">Phase 3 — Post House Job · Months 9–12 · Full Capacity Returns</div><div class="pline"></div></div>
+
+  <!-- M9 -->
+  <div class="card col" id="m9">
+    <div class="ch" onclick="tog('m9')">
+      <div class="mn"><div>MON</div><span>9</span></div>
+      <div class="mi"><div class="mt">FCPS Part 1 — Clinical Sciences Deep Dive</div><div class="ms">Internal Medicine depth · Surgical pathology · FCPS integration</div></div>
+      <div class="mm"><div class="qp">60 MCQs/day</div></div>
+      <span class="ti">▾</span>
+    </div>
+    <div class="cbody">
+      <ul class="cl">
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Internal Medicine: Go deeper than SMLE level — mechanisms, pathophysiology, management algorithms</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Focus: Cardiology, Nephrology, Endocrinology — highest FCPS yield subjects</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Surgical Pathology: Wound healing, surgical infections, fluid management principles</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">60 MCQs daily — mix of FCPS past papers + Kaplan</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Weekly mock: 100 questions every Sunday, timed, review all errors</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- M10 -->
+  <div class="card col" id="m10">
+    <div class="ch" onclick="tog('m10')">
+      <div class="mn"><div>MON</div><span>10</span></div>
+      <div class="mi"><div class="mt">FCPS Part 1 — Integration + Mock Exams</div><div class="ms">Full mock tests · Weak area blitz · Register for exam</div></div>
+      <div class="mm"><div class="qp">60–80/day</div></div>
+      <span class="ti">▾</span>
+    </div>
+    <div class="cbody">
+      <ul class="cl">
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Week 1: Full 200-question FCPS-style mock — timed</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Week 2: Analyse errors → categorize by subject and question type</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Week 3: Targeted blitz of weak areas identified</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Week 4: Second full mock — compare against Month 5 scores</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it"><strong>Register for FCPS Part 1 exam</strong> at CPSP (Karachi or Lahore)</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Target: 65%+ on mocks before attempting actual exam</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- M11 -->
+  <div class="card col" id="m11">
+    <div class="ch" onclick="tog('m11')">
+      <div class="mn r"><div>MON</div><span>11</span></div>
+      <div class="mi"><div class="mt">SIT FCPS Part 1 + Begin MRCP Foundation</div><div class="ms">Transition month — one exam done, next one begins</div></div>
+      <div class="mm"><div class="qp r">EXAM MONTH</div></div>
+      <span class="ti">▾</span>
+    </div>
+    <div class="cbody">
+      <ul class="cl">
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Week 1–2: Final FCPS prep — revision only, summary sheets, no new content</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it hl">⭐ Week 2: SIT FCPS PART 1 EXAM</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Week 3–4: Begin MRCP Part 1 orientation regardless of FCPS result</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Get Passmedicine subscription — best MRCP Qbank available</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Read MRCP Part 1 syllabus — note what is different from SMLE/FCPS</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Key MRCP additions: Statistics/Epidemiology, clinical data interpretation (ABGs, spirometry)</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- M12 -->
+  <div class="card col" id="m12">
+    <div class="ch" onclick="tog('m12')">
+      <div class="mn t"><div>MON</div><span>12</span></div>
+      <div class="mi"><div class="mt">MRCP Part 1 — Statistics + Advanced Internal Medicine</div><div class="ms">The MRCP-specific content requiring focused attention</div></div>
+      <div class="mm"><div class="qp">40 Passmedicine/day</div></div>
+      <span class="ti">▾</span>
+    </div>
+    <div class="cbody">
+      <div class="al ok">From Month 12 onward, you'll ideally be in Saudi Arabia. MRCP Part 1 attempt is funded by Saudi salary. No more studying at financial cost.</div>
+      <ul class="cl">
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Statistics + Epidemiology: Heavily tested in MRCP, minimal in FCPS/SMLE — master this now</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Topics: Sensitivity, specificity, PPV, NPV, NNT, confidence intervals, p-values, study types</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Resources: Passmedicine statistics section + "How to Read a Paper" by Greenhalgh</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Advanced Internal Medicine: MRCP goes deeper — rare presentations, complex management</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">Clinical data interpretation: ABGs, spirometry, ECG, CXR — systematic approach per modality</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">40 Passmedicine questions daily — track running score on the platform</span></li>
+        <li><div class="chkb" onclick="chk(this)"></div><span class="it">MRCP Part 1 attempt: Year 1 in Saudi — funded by salary</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- RETENTION -->
+  <div class="pdiv"><div class="pline"></div><div class="ppill sys">Retention System — Built Into Every Month</div><div class="pline"></div></div>
+  <div class="card col" id="s-ret">
+    <div class="ch" onclick="tog('s-ret')">
+      <div class="mn t"><span>🔁</span></div>
+      <div class="mi"><div class="mt">The Retention System</div><div class="ms">Weekly + Monthly + Spaced Repetition protocol</div></div>
+      <span class="ti">▾</span>
+    </div>
+    <div class="cbody">
+      <div class="rg">
+        <div class="rc"><div class="ri">📅</div><div class="rt">Weekly Cycle</div><div class="rd">Mon–Fri: New content + 40 MCQs. Saturday: Review all wrong answers deeply. Sunday: 2-hour topic revision + 50-question mock.</div></div>
+        <div class="rc"><div class="ri">📆</div><div class="rt">Monthly Cycle</div><div class="rd">100-question mixed mock at end of each month. Score tracking table. If score drops from last month — immediate subject review.</div></div>
+        <div class="rc"><div class="ri">🧠</div><div class="rt">Spaced Repetition</div><div class="rd">Review topic 1 day later (notes), 1 week later (MCQs), 1 month later (mock), 3 months later (summary sheets only).</div></div>
+      </div>
+      <div class="al warn"><strong>The One Rule That Makes Everything Work:</strong><p>Never end a study session without reviewing what you studied at the START of that session. Spend the last 10 minutes re-reading your first 10 minutes of notes. This single habit doubles retention.</p></div>
+      <div class="wb"><div class="wl">Anki Flashcard System (Optional but Powerful)</div>
+        <ul class="cl">
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it">Download Anki — free flashcard app with built-in spaced repetition algorithm</span></li>
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it">Make cards for: Drug side effects, clinical features, diagnostic criteria — not whole topics</span></li>
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it">20 Anki cards every morning before studying — 10 minutes, compounds daily</span></li>
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it">Pre-made USMLE/MRCP Anki decks available free online — download and modify</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- PACES -->
+  <div class="card col" id="s-paces">
+    <div class="ch" onclick="tog('s-paces')">
+      <div class="mn t"><span>🩺</span></div>
+      <div class="mi"><div class="mt">MRCP PACES — Building Clinical Skills During House Job</div><div class="ms">Your identified weakness — must be built daily, not last-minute</div></div>
+      <span class="ti">▾</span>
+    </div>
+    <div class="cbody">
+      <div class="al danger"><strong>Cannot be crammed.</strong><p>PACES is clinical performance under observation. You cannot build systematic examination technique in the final month. You build it during house job at Nishtar, every single patient, starting Day 1.</p></div>
+      <div class="wb"><div class="wl">The House Job PACES Protocol</div>
+        <ul class="cl">
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it">Every patient: take a structured history as if an examiner is watching</span></li>
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it">Every examination: complete and in correct sequence — not casually</span></li>
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it">Every week: present 2 cases formally to a senior and ask for direct feedback</span></li>
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it">ECGs: interpret every ECG yourself before confirming with senior — minimum 5/week</span></li>
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it">CXRs: interpret first, then confirm. Never just accept the report.</span></li>
+          <li><div class="chkb" onclick="chk(this)"></div><span class="it">Build your own examination checklist per system — follow it every single time</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCORE TRACKER -->
+  <div class="pdiv"><div class="pline"></div><div class="ppill sys">Score Tracker — Fill This Every Month</div><div class="pline"></div></div>
+  <div class="card" id="s-trk">
+    <div class="ch" onclick="tog('s-trk')">
+      <div class="mn t"><span>📈</span></div>
+      <div class="mi"><div class="mt">Monthly Mock Score Tracker</div><div class="ms">Record every mock result — if score drops, investigate immediately</div></div>
+      <span class="ti">▾</span>
+    </div>
+    <div class="cbody">
+      <table class="trk">
+        <tr><th>Month</th><th>Focus</th><th>Score</th><th>Weak Subject</th><th>Action Taken</th></tr>
+        <tr><td>1</td><td>IM Systems 1–4</td><td><input class="si" placeholder="__%"></td><td><input class="ni" placeholder="e.g. Nephrology"></td><td><input class="ni" placeholder="e.g. Reread K&C renal"></td></tr>
+        <tr><td>2</td><td>IM Systems 5–8</td><td><input class="si" placeholder="__%"></td><td><input class="ni" placeholder="..."></td><td><input class="ni" placeholder="..."></td></tr>
+        <tr><td>3</td><td>OB/GYN + Paeds</td><td><input class="si" placeholder="__%"></td><td><input class="ni" placeholder="..."></td><td><input class="ni" placeholder="..."></td></tr>
+        <tr><td>4</td><td>Surgery + Ethics</td><td><input class="si" placeholder="__%"></td><td><input class="ni" placeholder="..."></td><td><input class="ni" placeholder="..."></td></tr>
+        <tr><td>5</td><td>SMLE Integration</td><td><input class="si" placeholder="__%"></td><td><input class="ni" placeholder="..."></td><td><input class="ni" placeholder="..."></td></tr>
+        <tr><td>6</td><td>SMLE Final Prep</td><td><input class="si" placeholder="__%"></td><td><input class="ni" placeholder="..."></td><td><input class="ni" placeholder="..."></td></tr>
+        <tr><td>8</td><td>FCPS Basic Sciences</td><td><input class="si" placeholder="__%"></td><td><input class="ni" placeholder="..."></td><td><input class="ni" placeholder="..."></td></tr>
+        <tr><td>9</td><td>FCPS Clinical</td><td><input class="si" placeholder="__%"></td><td><input class="ni" placeholder="..."></td><td><input class="ni" placeholder="..."></td></tr>
+        <tr><td>10</td><td>FCPS Integration</td><td><input class="si" placeholder="__%"></td><td><input class="ni" placeholder="..."></td><td><input class="ni" placeholder="..."></td></tr>
+        <tr><td>12</td><td>MRCP Foundation</td><td><input class="si" placeholder="__%"></td><td><input class="ni" placeholder="..."></td><td><input class="ni" placeholder="..."></td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- WARNINGS -->
+  <div class="pdiv"><div class="pline"></div><div class="ppill wrn">Critical Warnings — Read These</div><div class="pline"></div></div>
+  <div class="card col" id="s-wrn">
+    <div class="ch" onclick="tog('s-wrn')">
+      <div class="mn r"><span>⚠️</span></div>
+      <div class="mi"><div class="mt">Honest Warnings</div><div class="ms">Things that will derail this plan if ignored</div></div>
+      <span class="ti">▾</span>
+    </div>
+    <div class="cbody">
+      <div class="al danger"><strong>⛔ The Perfectionism Warning — Written Specifically for You</strong><p>You have a known tendency toward perfectionism. This plan will trigger it. Do NOT read every chapter of Kumar & Clark in equal depth — some chapters are 2x higher yield. A completed chapter at 80% depth beats a perfect chapter that blocks all progress. Move on. You will revise again. This is a spiral curriculum, not a straight line.</p></div>
+      <div class="al warn"><strong>⚠️ Other Critical Warnings</strong><p>
+        • House job exhaustion is real. On days you study 45 minutes, that is enough. Don't break the streak.<br>
+        • MCQs are not optional. Reading without questions is not exam preparation — it is reading.<br>
+        • SMLE is the priority. Everything is secondary until SMLE is cleared and you are in Saudi.<br>
+        • Do not start Passmedicine before Month 11 — use it funded by Saudi salary.<br>
+        • Do not buy every book. Kumar & Clark + First Aid SMLE + FCPS past papers = 80% of what you need.
+      </p></div>
+    </div>
+  </div>
+
+  <div class="fq">
+    <p>"The goal is not to know everything."</p>
+    <span>Pass the exam. Get to Saudi. Build from there.</span>
+    <small>Every month of delay in getting to Saudi costs you SAR 13,000 — roughly PKR 1,000,000 per year.</small>
+  </div>
+</div>
+
+<script>
+// ── localStorage keys ──────────────────────────────────────────
+var STORE_CHK  = 'studyplan_checkboxes';
+var STORE_TRK  = 'studyplan_tracker';
+var STORE_COLS = 'studyplan_collapsed';
+
+// ── Checkboxes ─────────────────────────────────────────────────
+function getChkData(){try{return JSON.parse(localStorage.getItem(STORE_CHK)||'{}')}catch(e){return{}}}
+function saveChkData(d){localStorage.setItem(STORE_CHK,JSON.stringify(d))}
+
+function chk(el){
+  el.classList.toggle('done');
+  el.closest('li').classList.toggle('done',el.classList.contains('done'));
+  var idx=Array.from(document.querySelectorAll('.chkb')).indexOf(el);
+  var d=getChkData(); d[idx]=el.classList.contains('done'); saveChkData(d);
+  upd();
+}
+
+function loadChkData(){
+  var all=document.querySelectorAll('.chkb');
+  var d=getChkData();
+  all.forEach(function(el,i){
+    if(d[i]){el.classList.add('done');el.closest('li').classList.add('done');}
+    else{el.classList.remove('done');el.closest('li').classList.remove('done');}
+  });
+}
+
+function upd(){
+  var a=document.querySelectorAll('.chkb'),d=document.querySelectorAll('.chkb.done');
+  var p=a.length?Math.round(d.length/a.length*100):0;
+  document.getElementById('pf').style.width=p+'%';
+  document.getElementById('pp').textContent=p+'%';
+  document.getElementById('pc').textContent=d.length+' / '+a.length+' tasks';
+}
+
+// ── Score Tracker Inputs ───────────────────────────────────────
+function getTrkData(){try{return JSON.parse(localStorage.getItem(STORE_TRK)||'{}')}catch(e){return{}}}
+function saveTrkData(d){localStorage.setItem(STORE_TRK,JSON.stringify(d))}
+
+function bindTrackerInputs(){
+  var inputs=document.querySelectorAll('.si,.ni');
+  var saved=getTrkData();
+  inputs.forEach(function(inp,i){
+    if(saved[i]!==undefined) inp.value=saved[i];
+    inp.addEventListener('input',function(){
+      var cur=getTrkData(); cur[i]=inp.value; saveTrkData(cur);
+    });
+  });
+}
+
+// ── Collapsed State ────────────────────────────────────────────
+function getColData(){try{return JSON.parse(localStorage.getItem(STORE_COLS)||'{}')}catch(e){return{}}}
+function saveColData(d){localStorage.setItem(STORE_COLS,JSON.stringify(d))}
+
+function tog(id){
+  var el=document.getElementById(id);
+  el.classList.toggle('col');
+  var d=getColData(); d[id]=el.classList.contains('col'); saveColData(d);
+}
+
+function loadColData(){
+  var d=getColData();
+  Object.keys(d).forEach(function(id){
+    var el=document.getElementById(id);
+    if(!el) return;
+    if(d[id]) el.classList.add('col'); else el.classList.remove('col');
+  });
+}
+
+// ── Init ───────────────────────────────────────────────────────
+window.addEventListener('DOMContentLoaded',function(){
+  loadColData();
+  loadChkData();
+  bindTrackerInputs();
+  upd();
+});
+</script>
+</body>
+</html>
